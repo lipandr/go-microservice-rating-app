@@ -1,0 +1,1 @@
+# go-microservice-rating-app
