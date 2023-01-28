@@ -5,9 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="67d6f17e-55a1-4eaa-b3d2-a076102c0fa0" name="Changes" comment="memory repo">
-      <change afterPath="$PROJECT_DIR$/metadata/internal/repository/error.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/metadata/cmd/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/metadata/internal/controller/metadata/controller.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/metadata/internal/handler/http/http.go" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/metadata/internal/repository/memory/memory.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/metadata/pkg/model/model.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/movie/cmd/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/movie/internal/controller/movie/controller.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/movie/internal/gateway/error.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/movie/internal/gateway/metadata/http/metadata.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/movie/internal/gateway/rating/http/rating.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/movie/internal/handler/http/http.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/movie/pkg/model/model.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rating/cmd/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rating/internal/controller/rating/controller.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rating/internal/handler/http/http.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rating/internal/repository/error.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rating/internal/repository/memory/memory.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rating/pkg/model/rating.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,6 +68,42 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="go.sdk" />
   </component>
+  <component name="RunManager" selected="Go Build.go build github.com/lipandr/go-microservice-rating-app/movie/cmd">
+    <configuration name="go build github.com/lipandr/go-microservice-rating-app/metadata/cmd" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="go-microservice-rating-app" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <package value="github.com/lipandr/go-microservice-rating-app/metadata/cmd" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$/metadata/cmd/main.go" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build github.com/lipandr/go-microservice-rating-app/movie/cmd" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="go-microservice-rating-app" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <package value="github.com/lipandr/go-microservice-rating-app/movie/cmd" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$/movie/cmd/main.go" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build github.com/lipandr/go-microservice-rating-app/rating/cmd" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="go-microservice-rating-app" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <package value="github.com/lipandr/go-microservice-rating-app/rating/cmd" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$/rating/cmd/main.go" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Go Build.go build github.com/lipandr/go-microservice-rating-app/movie/cmd" />
+        <item itemvalue="Go Build.go build github.com/lipandr/go-microservice-rating-app/metadata/cmd" />
+        <item itemvalue="Go Build.go build github.com/lipandr/go-microservice-rating-app/rating/cmd" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
@@ -73,5 +124,8 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="memory repo" />
     <option name="LAST_COMMIT_MESSAGE" value="memory repo" />
+  </component>
+  <component name="VgoProject">
+    <integration-enabled>true</integration-enabled>
   </component>
 </project>
