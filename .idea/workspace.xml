@@ -5,24 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="67d6f17e-55a1-4eaa-b3d2-a076102c0fa0" name="Changes" comment="memory repo">
-      <change afterPath="$PROJECT_DIR$/metadata/cmd/main.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/metadata/internal/controller/metadata/controller.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/metadata/internal/handler/http/http.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/metadata/internal/repository/memory/memory.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/movie/cmd/main.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/movie/internal/controller/movie/controller.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/movie/internal/gateway/error.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/movie/internal/gateway/metadata/http/metadata.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/movie/internal/gateway/rating/http/rating.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/movie/internal/handler/http/http.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/movie/pkg/model/model.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rating/cmd/main.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rating/internal/controller/rating/controller.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rating/internal/handler/http/http.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rating/internal/repository/error.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rating/internal/repository/memory/memory.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rating/pkg/model/rating.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/discovery/consul/consul.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/discovery/discovery.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/discovery/memorypackage/memory.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/metadata/cmd/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/metadata/cmd/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/metadata/internal/controller/metadata/controller.go" beforeDir="false" afterPath="$PROJECT_DIR$/metadata/internal/controller/metadata/controller.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/movie/cmd/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/movie/cmd/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/movie/internal/gateway/metadata/http/metadata.go" beforeDir="false" afterPath="$PROJECT_DIR$/movie/internal/gateway/metadata/http/metadata.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/movie/internal/gateway/rating/http/rating.go" beforeDir="false" afterPath="$PROJECT_DIR$/movie/internal/gateway/rating/http/rating.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rating/cmd/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/rating/cmd/main.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,7 +35,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="rating_apps" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -69,6 +64,24 @@
     <property name="settings.editor.selected.configurable" value="go.sdk" />
   </component>
   <component name="RunManager" selected="Go Build.go build github.com/lipandr/go-microservice-rating-app/movie/cmd">
+    <configuration default="true" type="GoApplicationRunConfiguration" factoryName="Go Application">
+      <module name="go-microservice-rating-app" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <package value="github.com/lipandr/go-microservice-rating-app" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build github.com/lipandr/go-microservice-rating-app" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="go-microservice-rating-app" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <package value="github.com/lipandr/go-microservice-rating-app" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$/test.go" />
+      <method v="2" />
+    </configuration>
     <configuration name="go build github.com/lipandr/go-microservice-rating-app/metadata/cmd" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="go-microservice-rating-app" />
       <working_directory value="$PROJECT_DIR$" />
@@ -96,11 +109,22 @@
       <filePath value="$PROJECT_DIR$/rating/cmd/main.go" />
       <method v="2" />
     </configuration>
+    <configuration default="true" type="GoTestRunConfiguration" factoryName="Go Test">
+      <module name="go-microservice-rating-app" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="DIRECTORY" />
+      <package value="github.com/lipandr/go-microservice-rating-app" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Go Build.go build github.com/lipandr/go-microservice-rating-app/movie/cmd" />
         <item itemvalue="Go Build.go build github.com/lipandr/go-microservice-rating-app/metadata/cmd" />
+        <item itemvalue="Go Build.go build github.com/lipandr/go-microservice-rating-app/movie/cmd" />
         <item itemvalue="Go Build.go build github.com/lipandr/go-microservice-rating-app/rating/cmd" />
+        <item itemvalue="Go Build.go build github.com/lipandr/go-microservice-rating-app" />
       </list>
     </recent_temporary>
   </component>

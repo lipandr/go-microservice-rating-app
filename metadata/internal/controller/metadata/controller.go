@@ -27,7 +27,7 @@ func New(repo metadataRepository) *Controller {
 
 // Get returns movie metadata by id.
 func (c *Controller) Get(ctx context.Context, id string) (*model.Metadata, error) {
-	res, err := c.Get(ctx, id)
+	res, err := c.repo.Get(ctx, id)
 	if err != nil && errors.Is(err, repository.ErrNotFound) {
 		return nil, ErrNotFound
 	}
