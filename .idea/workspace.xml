@@ -5,13 +5,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="67d6f17e-55a1-4eaa-b3d2-a076102c0fa0" name="Changes" comment="discovery service">
-      <change afterPath="$PROJECT_DIR$/api/movie.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmd/sizecompare/main.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmd/sizecompare/main_test.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gen/movie.pb.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/go-microservice-rating-app.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gen/movie_grpc.pb.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/internal/grpcutil/grpcutil.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/metadata/internal/handler/grpc/grpc.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/metadata/pkg/model/mapper.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/movie/internal/gateway/metadata/grpc/metadata.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/movie/internal/gateway/rating/grpc/grpc.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/movie/internal/handler/grpc/grpc.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rating/internal/handler/grpc/grpc.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/movie.proto" beforeDir="false" afterPath="$PROJECT_DIR$/api/movie.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gen/movie.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/gen/movie.pb.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/metadata/cmd/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/metadata/cmd/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/movie/cmd/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/movie/cmd/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/movie/internal/controller/movie/controller.go" beforeDir="false" afterPath="$PROJECT_DIR$/movie/internal/controller/movie/controller.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rating/cmd/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/rating/cmd/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.go" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,7 +44,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="service_discovery" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -42,22 +57,12 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
-    <property name="DefaultGoTemplateProperty" value="Go File" />
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="configurable..is.expanded" value="false" />
-    <property name="configurable.GoLibrariesConfigurable.is.expanded" value="true" />
-    <property name="go.formatter.settings.were.checked" value="true" />
-    <property name="go.import.settings.migrated" value="true" />
-    <property name="go.modules.go.list.on.any.changes.was.set" value="true" />
-    <property name="go.sdk.automatically.set" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="go.sdk" />
-  </component>
-  <component name="RunManager" selected="Go Test.gobench github.com/lipandr/go-microservice-rating-app/cmd/sizecompare">
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultGoTemplateProperty": "Go File"
+  }
+}]]></component>
+  <component name="RunManager" selected="Go Build.go build github.com/lipandr/go-microservice-rating-app/movie/cmd">
     <configuration default="true" type="GoApplicationRunConfiguration" factoryName="Go Application">
       <module name="go-microservice-rating-app" />
       <working_directory value="$PROJECT_DIR$" />
@@ -126,11 +131,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Go Test.gobench github.com/lipandr/go-microservice-rating-app/cmd/sizecompare" />
-        <item itemvalue="Go Build.go build github.com/lipandr/go-microservice-rating-app/cmd/sizecompare" />
-        <item itemvalue="Go Build.go build github.com/lipandr/go-microservice-rating-app/metadata/cmd" />
         <item itemvalue="Go Build.go build github.com/lipandr/go-microservice-rating-app/movie/cmd" />
         <item itemvalue="Go Build.go build github.com/lipandr/go-microservice-rating-app/rating/cmd" />
+        <item itemvalue="Go Build.go build github.com/lipandr/go-microservice-rating-app/metadata/cmd" />
+        <item itemvalue="Go Test.gobench github.com/lipandr/go-microservice-rating-app/cmd/sizecompare" />
+        <item itemvalue="Go Build.go build github.com/lipandr/go-microservice-rating-app/cmd/sizecompare" />
       </list>
     </recent_temporary>
   </component>
@@ -148,15 +153,11 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="memory repo" />
     <MESSAGE value="discovery service" />
     <option name="LAST_COMMIT_MESSAGE" value="discovery service" />
-  </component>
-  <component name="VgoProject">
-    <integration-enabled>true</integration-enabled>
   </component>
 </project>

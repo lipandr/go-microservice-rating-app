@@ -5,13 +5,16 @@ import (
 	"flag"
 	"fmt"
 	"log"
-	"net/http"
+	"net"
 	"time"
 
+	"google.golang.org/grpc"
+
+	"github.com/lipandr/go-microservice-rating-app/gen"
 	"github.com/lipandr/go-microservice-rating-app/pkg/discovery"
 	"github.com/lipandr/go-microservice-rating-app/pkg/discovery/consul"
 	"github.com/lipandr/go-microservice-rating-app/rating/internal/controller/rating"
-	httpHandler "github.com/lipandr/go-microservice-rating-app/rating/internal/handler/http"
+	grpcHandler "github.com/lipandr/go-microservice-rating-app/rating/internal/handler/grpc"
 	"github.com/lipandr/go-microservice-rating-app/rating/internal/repository/memory"
 )
 
@@ -46,9 +49,14 @@ func main() {
 
 	repo := memory.New()
 	ctrl := rating.New(repo)
-	h := httpHandler.New(ctrl)
-	http.Handle("/rating", http.HandlerFunc(h.Handle))
-	if err := http.ListenAndServe(fmt.Sprintf(":%d", port), nil); err != nil {
+	h := grpcHandler.New(ctrl)
+	lis, err := net.Listen("tcp", "localhost:8082")
+	if err != nil {
+		log.Fatalf("failed to listen %v", err)
+	}
+	srv := grpc.NewServer()
+	gen.RegisterRatingServiceServer(srv, h)
+	if err := srv.Serve(lis); err != nil {
 		panic(err)
 	}
 }
