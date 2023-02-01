@@ -4,20 +4,14 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="67d6f17e-55a1-4eaa-b3d2-a076102c0fa0" name="Changes" comment="memory repo">
-      <change afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pkg/discovery/consul/consul.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pkg/discovery/discovery.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pkg/discovery/memorypackage/memory.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test.go" afterDir="false" />
+    <list default="true" id="67d6f17e-55a1-4eaa-b3d2-a076102c0fa0" name="Changes" comment="discovery service">
+      <change afterPath="$PROJECT_DIR$/api/movie.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmd/sizecompare/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmd/sizecompare/main_test.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gen/movie.pb.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/metadata/cmd/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/metadata/cmd/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/metadata/internal/controller/metadata/controller.go" beforeDir="false" afterPath="$PROJECT_DIR$/metadata/internal/controller/metadata/controller.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/movie/cmd/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/movie/cmd/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/movie/internal/gateway/metadata/http/metadata.go" beforeDir="false" afterPath="$PROJECT_DIR$/movie/internal/gateway/metadata/http/metadata.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/movie/internal/gateway/rating/http/rating.go" beforeDir="false" afterPath="$PROJECT_DIR$/movie/internal/gateway/rating/http/rating.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rating/cmd/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/rating/cmd/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,7 +29,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="rating_apps" />
+        <entry key="$PROJECT_DIR$" value="service_discovery" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -63,7 +57,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="go.sdk" />
   </component>
-  <component name="RunManager" selected="Go Build.go build github.com/lipandr/go-microservice-rating-app/movie/cmd">
+  <component name="RunManager" selected="Go Test.gobench github.com/lipandr/go-microservice-rating-app/cmd/sizecompare">
     <configuration default="true" type="GoApplicationRunConfiguration" factoryName="Go Application">
       <module name="go-microservice-rating-app" />
       <working_directory value="$PROJECT_DIR$" />
@@ -73,13 +67,13 @@
       <filePath value="$PROJECT_DIR$" />
       <method v="2" />
     </configuration>
-    <configuration name="go build github.com/lipandr/go-microservice-rating-app" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+    <configuration name="go build github.com/lipandr/go-microservice-rating-app/cmd/sizecompare" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="go-microservice-rating-app" />
       <working_directory value="$PROJECT_DIR$" />
       <kind value="PACKAGE" />
-      <package value="github.com/lipandr/go-microservice-rating-app" />
+      <package value="github.com/lipandr/go-microservice-rating-app/cmd/sizecompare" />
       <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$/test.go" />
+      <filePath value="$PROJECT_DIR$/cmd/sizecompare/main.go" />
       <method v="2" />
     </configuration>
     <configuration name="go build github.com/lipandr/go-microservice-rating-app/metadata/cmd" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
@@ -119,12 +113,24 @@
       <framework value="gotest" />
       <method v="2" />
     </configuration>
+    <configuration name="gobench github.com/lipandr/go-microservice-rating-app/cmd/sizecompare" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="go-microservice-rating-app" />
+      <working_directory value="$PROJECT_DIR$/cmd/sizecompare" />
+      <root_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <package value="github.com/lipandr/go-microservice-rating-app/cmd/sizecompare" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gobench" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Go Test.gobench github.com/lipandr/go-microservice-rating-app/cmd/sizecompare" />
+        <item itemvalue="Go Build.go build github.com/lipandr/go-microservice-rating-app/cmd/sizecompare" />
         <item itemvalue="Go Build.go build github.com/lipandr/go-microservice-rating-app/metadata/cmd" />
         <item itemvalue="Go Build.go build github.com/lipandr/go-microservice-rating-app/movie/cmd" />
         <item itemvalue="Go Build.go build github.com/lipandr/go-microservice-rating-app/rating/cmd" />
-        <item itemvalue="Go Build.go build github.com/lipandr/go-microservice-rating-app" />
       </list>
     </recent_temporary>
   </component>
@@ -147,7 +153,8 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="memory repo" />
-    <option name="LAST_COMMIT_MESSAGE" value="memory repo" />
+    <MESSAGE value="discovery service" />
+    <option name="LAST_COMMIT_MESSAGE" value="discovery service" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
