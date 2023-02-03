@@ -4,12 +4,15 @@ import (
 	"context"
 	"flag"
 	"fmt"
+	"github.com/lipandr/go-microservice-rating-app/gen"
+	"google.golang.org/grpc"
+	"google.golang.org/grpc/reflection"
 	"log"
-	"net/http"
+	"net"
 	"time"
 
 	"github.com/lipandr/go-microservice-rating-app/metadata/internal/controller/metadata"
-	httpHandler "github.com/lipandr/go-microservice-rating-app/metadata/internal/handler/http"
+	grpcHandler "github.com/lipandr/go-microservice-rating-app/metadata/internal/handler/grpc"
 	"github.com/lipandr/go-microservice-rating-app/metadata/internal/repository/memory"
 	"github.com/lipandr/go-microservice-rating-app/pkg/discovery"
 	"github.com/lipandr/go-microservice-rating-app/pkg/discovery/consul"
@@ -46,9 +49,16 @@ func main() {
 
 	repo := memory.New()
 	ctrl := metadata.New(repo)
-	h := httpHandler.New(ctrl)
-	http.Handle("/metadata", http.HandlerFunc(h.GetMetadata))
-	if err := http.ListenAndServe(fmt.Sprintf(":%d", port), nil); err != nil {
+	h := grpcHandler.New(ctrl)
+	lis, err := net.Listen("tcp", fmt.Sprintf("localhost:%d", port))
+	if err != nil {
+		log.Fatalf("failed to listen: %v", err)
+	}
+	srv := grpc.NewServer()
+	reflection.Register(srv)
+	gen.RegisterMetadataServiceServer(srv, h)
+
+	if err := srv.Serve(lis); err != nil {
 		panic(err)
 	}
 }

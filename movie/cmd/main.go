@@ -5,13 +5,17 @@ import (
 	"flag"
 	"fmt"
 	"log"
-	"net/http"
+	"net"
 	"time"
 
+	"google.golang.org/grpc"
+	"google.golang.org/grpc/reflection"
+
+	"github.com/lipandr/go-microservice-rating-app/gen"
 	"github.com/lipandr/go-microservice-rating-app/movie/internal/controller/movie"
-	metadataGateway "github.com/lipandr/go-microservice-rating-app/movie/internal/gateway/metadata/http"
-	ratingGateway "github.com/lipandr/go-microservice-rating-app/movie/internal/gateway/rating/http"
-	httpHandler "github.com/lipandr/go-microservice-rating-app/movie/internal/handler/http"
+	metadataGateway "github.com/lipandr/go-microservice-rating-app/movie/internal/gateway/metadata/grpc"
+	ratingGateway "github.com/lipandr/go-microservice-rating-app/movie/internal/gateway/rating/grpc"
+	grpcHandler "github.com/lipandr/go-microservice-rating-app/movie/internal/handler/grpc"
 	"github.com/lipandr/go-microservice-rating-app/pkg/discovery"
 	"github.com/lipandr/go-microservice-rating-app/pkg/discovery/consul"
 )
@@ -48,9 +52,15 @@ func main() {
 	metadataGW := metadataGateway.New(registry)
 	ratingGW := ratingGateway.New(registry)
 	ctrl := movie.New(ratingGW, metadataGW)
-	h := httpHandler.New(ctrl)
-	http.Handle("/movie", http.HandlerFunc(h.GetMovieDetails))
-	if err := http.ListenAndServe(fmt.Sprintf(":%d", port), nil); err != nil {
+	h := grpcHandler.New(ctrl)
+	lis, err := net.Listen("tcp", fmt.Sprintf("localhost:%d", port))
+	if err != nil {
+		log.Fatalf("failed to liten: %v", err)
+	}
+	srv := grpc.NewServer()
+	reflection.Register(srv)
+	gen.RegisterMovieServiceServer(srv, h)
+	if err := srv.Serve(lis); err != nil {
 		panic(err)
 	}
 }
