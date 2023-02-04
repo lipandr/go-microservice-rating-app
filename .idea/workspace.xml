@@ -4,29 +4,15 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="67d6f17e-55a1-4eaa-b3d2-a076102c0fa0" name="Changes" comment="discovery service">
-      <change afterPath="$PROJECT_DIR$/.idea/go-microservice-rating-app.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gen/movie_grpc.pb.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/internal/grpcutil/grpcutil.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/metadata/internal/handler/grpc/grpc.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/metadata/pkg/model/mapper.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/movie/internal/gateway/metadata/grpc/metadata.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/movie/internal/gateway/rating/grpc/grpc.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/movie/internal/handler/grpc/grpc.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rating/internal/handler/grpc/grpc.go" afterDir="false" />
+    <list default="true" id="67d6f17e-55a1-4eaa-b3d2-a076102c0fa0" name="Changes" comment="grpc communication">
+      <change afterPath="$PROJECT_DIR$/cmd/ratingingrester/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmd/ratingingrester/ratingsdata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rating/internal/ingrester/kafka/ingrester.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/movie.proto" beforeDir="false" afterPath="$PROJECT_DIR$/api/movie.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gen/movie.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/gen/movie.pb.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/metadata/cmd/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/metadata/cmd/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/movie/cmd/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/movie/cmd/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/movie/internal/controller/movie/controller.go" beforeDir="false" afterPath="$PROJECT_DIR$/movie/internal/controller/movie/controller.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rating/cmd/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/rating/cmd/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rating/internal/controller/rating/controller.go" beforeDir="false" afterPath="$PROJECT_DIR$/rating/internal/controller/rating/controller.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rating/pkg/model/rating.go" beforeDir="false" afterPath="$PROJECT_DIR$/rating/pkg/model/rating.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,14 +26,20 @@
       </list>
     </option>
   </component>
-  <component name="GOROOT" url="file://$USER_HOME$/go/go1.17.13" />
+  <component name="GOROOT" url="file://$USER_HOME$/sdk/go1.17.13" />
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="synchronous_communication" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GoLibraries">
+    <option name="indexEntireGoPath" value="true" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2KxWahJawyblwSPSVaM8zns09a6" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -57,11 +49,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultGoTemplateProperty": "Go File"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultGoTemplateProperty&quot;: &quot;Go File&quot;,
+    &quot;RunOnceActivity.go.format.on.save.advertiser.fired&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.modules.go.list.on.any.changes.was.set&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.watchers.conflict.with.on.save.actions.check.performed&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;configurable..is.expanded&quot;: &quot;false&quot;,
+    &quot;configurable.GoLibrariesConfigurable.is.expanded&quot;: &quot;true&quot;,
+    &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
+    &quot;go.sdk.automatically.set&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/andre&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;go.vgo&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Go Build.go build github.com/lipandr/go-microservice-rating-app/movie/cmd">
     <configuration default="true" type="GoApplicationRunConfiguration" factoryName="Go Application">
       <module name="go-microservice-rating-app" />
@@ -158,6 +162,10 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="memory repo" />
     <MESSAGE value="discovery service" />
-    <option name="LAST_COMMIT_MESSAGE" value="discovery service" />
+    <MESSAGE value="grpc communication" />
+    <option name="LAST_COMMIT_MESSAGE" value="grpc communication" />
+  </component>
+  <component name="VgoProject">
+    <settings-migrated>true</settings-migrated>
   </component>
 </project>
