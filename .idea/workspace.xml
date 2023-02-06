@@ -4,15 +4,16 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="67d6f17e-55a1-4eaa-b3d2-a076102c0fa0" name="Changes" comment="grpc communication">
-      <change afterPath="$PROJECT_DIR$/cmd/ratingingrester/main.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmd/ratingingrester/ratingsdata.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rating/internal/ingrester/kafka/ingrester.go" afterDir="false" />
+    <list default="true" id="67d6f17e-55a1-4eaa-b3d2-a076102c0fa0" name="Changes" comment="async communications">
+      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/metadata/internal/repository/mysql/mysql.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rating/internal/repository/mysql/mysql.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/schema/schema.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rating/internal/controller/rating/controller.go" beforeDir="false" afterPath="$PROJECT_DIR$/rating/internal/controller/rating/controller.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rating/pkg/model/rating.go" beforeDir="false" afterPath="$PROJECT_DIR$/rating/pkg/model/rating.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/grpcutil/grpcutil.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/grpcutil/grpcutil.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rating/cmd/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/rating/cmd/main.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,7 +31,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="synchronous_communication" />
+        <entry key="$PROJECT_DIR$" value="apache_kafka_impl" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -49,24 +50,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultGoTemplateProperty&quot;: &quot;Go File&quot;,
-    &quot;RunOnceActivity.go.format.on.save.advertiser.fired&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.modules.go.list.on.any.changes.was.set&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.watchers.conflict.with.on.save.actions.check.performed&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;configurable..is.expanded&quot;: &quot;false&quot;,
-    &quot;configurable.GoLibrariesConfigurable.is.expanded&quot;: &quot;true&quot;,
-    &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
-    &quot;go.sdk.automatically.set&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/andre&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;go.vgo&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "DefaultGoTemplateProperty": "Go File",
+    "RunOnceActivity.go.format.on.save.advertiser.fired": "true",
+    "RunOnceActivity.go.formatter.settings.were.checked": "true",
+    "RunOnceActivity.go.migrated.go.modules.settings": "true",
+    "RunOnceActivity.go.modules.go.list.on.any.changes.was.set": "true",
+    "RunOnceActivity.go.watchers.conflict.with.on.save.actions.check.performed": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "configurable..is.expanded": "false",
+    "configurable.GoLibrariesConfigurable.is.expanded": "true",
+    "go.import.settings.migrated": "true",
+    "go.sdk.automatically.set": "true",
+    "last_opened_file_path": "/Users/andre/GolandProjects/go-microservice-rating-app",
+    "settings.editor.selected.configurable": "go.vgo",
+    "two.files.diff.last.used.file": "/Users/andre/GolandProjects/Microservices-with-Go/Chapter07/src/rating/cmd/main.go"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
+    ]
   }
-}</component>
-  <component name="RunManager" selected="Go Build.go build github.com/lipandr/go-microservice-rating-app/movie/cmd">
+}]]></component>
+  <component name="RunManager" selected="Go Build.go build github.com/lipandr/go-microservice-rating-app/rating/cmd">
     <configuration default="true" type="GoApplicationRunConfiguration" factoryName="Go Application">
       <module name="go-microservice-rating-app" />
       <working_directory value="$PROJECT_DIR$" />
@@ -135,8 +143,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Go Build.go build github.com/lipandr/go-microservice-rating-app/movie/cmd" />
         <item itemvalue="Go Build.go build github.com/lipandr/go-microservice-rating-app/rating/cmd" />
+        <item itemvalue="Go Build.go build github.com/lipandr/go-microservice-rating-app/movie/cmd" />
         <item itemvalue="Go Build.go build github.com/lipandr/go-microservice-rating-app/metadata/cmd" />
         <item itemvalue="Go Test.gobench github.com/lipandr/go-microservice-rating-app/cmd/sizecompare" />
         <item itemvalue="Go Build.go build github.com/lipandr/go-microservice-rating-app/cmd/sizecompare" />
@@ -163,7 +171,8 @@
     <MESSAGE value="memory repo" />
     <MESSAGE value="discovery service" />
     <MESSAGE value="grpc communication" />
-    <option name="LAST_COMMIT_MESSAGE" value="grpc communication" />
+    <MESSAGE value="async communications" />
+    <option name="LAST_COMMIT_MESSAGE" value="async communications" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>

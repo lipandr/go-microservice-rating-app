@@ -9,13 +9,14 @@ import (
 	"time"
 
 	"google.golang.org/grpc"
+	"google.golang.org/grpc/reflection"
 
 	"github.com/lipandr/go-microservice-rating-app/gen"
 	"github.com/lipandr/go-microservice-rating-app/pkg/discovery"
 	"github.com/lipandr/go-microservice-rating-app/pkg/discovery/consul"
 	"github.com/lipandr/go-microservice-rating-app/rating/internal/controller/rating"
 	grpcHandler "github.com/lipandr/go-microservice-rating-app/rating/internal/handler/grpc"
-	"github.com/lipandr/go-microservice-rating-app/rating/internal/repository/memory"
+	"github.com/lipandr/go-microservice-rating-app/rating/internal/repository/mysql"
 )
 
 const serviceName = "rating"
@@ -47,7 +48,10 @@ func main() {
 
 	defer registry.Deregister(ctx, instanceID, serviceName)
 
-	repo := memory.New()
+	repo, err := mysql.New()
+	if err != nil {
+		panic(err)
+	}
 	ctrl := rating.New(repo, nil)
 	h := grpcHandler.New(ctrl)
 	lis, err := net.Listen("tcp", "localhost:8082")
@@ -55,6 +59,7 @@ func main() {
 		log.Fatalf("failed to listen %v", err)
 	}
 	srv := grpc.NewServer()
+	reflection.Register(srv)
 	gen.RegisterRatingServiceServer(srv, h)
 	if err := srv.Serve(lis); err != nil {
 		panic(err)
