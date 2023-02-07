@@ -2,9 +2,9 @@ package grpcutil
 
 import (
 	"context"
-	"google.golang.org/grpc"
 	"math/rand"
 
+	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials/insecure"
 
 	"github.com/lipandr/go-microservice-rating-app/pkg/discovery"
